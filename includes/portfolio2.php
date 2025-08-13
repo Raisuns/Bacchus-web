@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/db.php';
-
 $sql = "SELECT step_number, step_total, text, delay_class 
         FROM portfolio_steps 
         WHERE is_active = 1 
@@ -21,7 +20,6 @@ if ($res && $res->num_rows > 0) {
         ];
     }
 
-    // Cetak semua step dengan separator di antaranya
     $totalSteps = count($steps);
     foreach ($steps as $i => $step) {
         $classes = 'process animate';
@@ -46,7 +44,7 @@ if ($res && $res->num_rows > 0) {
         }
     }
 } else {
-    // fallback jika DB kosong
+    // fallback kalau DB kosong
     echo '    <div class="process animate">';
     echo '        <span>1</span><span>/</span><span>3</span>';
     echo '        <p class="process-txt">Explore & Collect Information</p>';

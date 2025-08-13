@@ -13,7 +13,6 @@ if ($res && $res->num_rows > 0) {
         echo '    <div><img src="' . $img . '" alt=""></div>';
     }
 } else {
-    // fallback jika kosong
     echo '    <div><img src="images/hero_img_01.jpg" alt=""></div>';
     echo '    <div><img src="images/hero_img_02.jpg" alt=""></div>';
     echo '    <div><img src="images/hero_img_03.jpg" alt=""></div>';
